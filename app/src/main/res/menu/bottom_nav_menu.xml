@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Inicio"
+        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/inicio"/>
+    <item
+        android:title="Resumo"
+        android:icon="@drawable/baseline_attach_money_24"
+        android:id="@+id/resumo"/>
+    <item
+        android:title="Cadastro"
+        android:icon="@drawable/baseline_note_add_24"
+        android:id="@+id/cadastro"/>
+</menu>
