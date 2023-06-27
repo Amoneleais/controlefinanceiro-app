@@ -2,18 +2,15 @@ package com.example.controlefinanceiro;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-import android.content.Intent;
 
 import com.example.controlefinanceiro.database.MyDatabase;
 import com.example.controlefinanceiro.databinding.FragmentLoginBinding;
@@ -24,8 +21,8 @@ import com.example.controlefinanceiro.helpers.SessionManager;
 
 public class Login extends Fragment {
 
-    private FragmentLoginBinding binding;
-    private SessionManager sessionManager;
+    FragmentLoginBinding binding;
+    SessionManager sessionManager;
 
 
     public Login(){
@@ -38,7 +35,6 @@ public class Login extends Fragment {
         sessionManager = new SessionManager(getActivity().getApplicationContext());
         binding = FragmentLoginBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     @Override
@@ -84,7 +80,6 @@ public class Login extends Fragment {
         if(sessionManager.getLogin()){
             startActivity(new Intent(getActivity().getApplicationContext(), MainActivity2.class));
         }
-
         binding.btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

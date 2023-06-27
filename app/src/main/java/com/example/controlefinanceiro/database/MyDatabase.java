@@ -13,6 +13,7 @@ import com.example.controlefinanceiro.entities.UsuarioDAO;
 
 @Database(entities = {Documento.class, Usuario.class}, version = 1)
 public abstract class MyDatabase extends RoomDatabase {
+    UsuarioDAO usuarioDAO;
 
     private static final String nomedb = "mydatabase";
     private static MyDatabase myDatabase;
@@ -25,6 +26,10 @@ public abstract class MyDatabase extends RoomDatabase {
       }
       return myDatabase;
     };
+
+    public void setUsuarioDAO(UsuarioDAO usuarioDAO) {
+        this.usuarioDAO = usuarioDAO;
+    }
 
     public abstract UsuarioDAO usuarioDAO();
 

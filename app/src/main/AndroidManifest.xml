@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControleFinanceiro"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
@@ -30,6 +31,5 @@
             </intent-filter>
         </activity>
     </application>
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

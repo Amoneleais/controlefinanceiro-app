@@ -8,13 +8,13 @@ import androidx.room.PrimaryKey;
 public class Usuario {
 
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    public int id;
 
     @ColumnInfo(name = "senha")
-    private String senha;
+    public String senha;
 
     @ColumnInfo(name = "nome")
-    private String nome;
+    public String nome;
 
     @ColumnInfo(name = "foto_perfil")
     public String profilePicturePath;
